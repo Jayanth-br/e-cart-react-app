@@ -1,5 +1,8 @@
 import ekartImg from "../assets/ekart.png";
 import "./NavBar.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+
 function NavBar() {
     return (
         <nav className="nav-bar">
@@ -11,6 +14,21 @@ function NavBar() {
                     alt="e-kart logo"
                 ></img>
                 <h1 className="nav-bar-logo-name">e-kart</h1>
+            </div>
+
+            <div className="nav-bar-middle-section">
+                <input type="text" id="nav-search-bar" className="search-bar" placeholder="Search for Products..."/>
+                
+                <button className="nav-bar-search-btn">
+                    <FontAwesomeIcon icon={faMagnifyingGlass} style={{color: "#255fa6", height: "25px", padding: "4px 8px"}} />
+                </button>
+            </div>
+
+
+            <div className="nav-bar-right-section">
+                <button className="order-btn nav-bar-btn">Orders</button>
+                <button className="cart-btn nav-bar-btn">Cart</button>
+                <button className="profile-btn nav-bar-btn">Profile</button>
             </div>
             
 
