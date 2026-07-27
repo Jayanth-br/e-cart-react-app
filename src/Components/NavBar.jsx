@@ -24,14 +24,12 @@ function NavBar() {
                 </button>
             </div>
 
-
             <div className="nav-bar-right-section">
                 <button className="order-btn nav-bar-btn">Orders</button>
                 <button className="cart-btn nav-bar-btn">Cart</button>
                 <button className="profile-btn nav-bar-btn">Profile</button>
             </div>
             
-
         </nav>
     )
 }
