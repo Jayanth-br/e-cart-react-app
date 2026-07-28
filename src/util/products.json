@@ -3,30 +3,45 @@
         "id": 1,
         "image": "../../../public/onePlus.jpg",
         "title": "OnePlus N6",
+        "info": "Aether Green, 8GB/128GB",
+        "rating": 4.3,
+        "reviews": 123,
         "price": 22999
     },
     {
         "id": 2,
         "image": "../../../public/onePlus.jpg",
         "title": "OnePlus N6",
+        "info": "Aether Green, 8GB/128GB",
+        "rating": 4.3,
+        "reviews": 123,
         "price": 22999
     },
     {
         "id": 3,
         "image": "../../../public/onePlus.jpg",
         "title": "OnePlus N6",
+        "info": "Aether Green, 8GB/128GB",
+        "rating": 4.3,
+        "reviews": 123,
         "price": 22999
     },
     {
         "id": 4,
         "image": "../../../public/onePlus.jpg",
         "title": "OnePlus N6",
+        "info": "Aether Green, 8GB/128GB",
+        "rating": 4.3,
+        "reviews": 123,
         "price": 22999
     },
     {
         "id": 5,
         "image": "../../../public/onePlus.jpg",
         "title": "OnePlus N6",
+        "info": "Aether Green, 8GB/128GB",
+        "rating": 4.3,
+        "reviews": 123,
         "price": 22999
     }
 ]
