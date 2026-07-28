@@ -9,6 +9,11 @@
   -moz-osx-font-smoothing: grayscale;
 
   --primary-color: #255fa6;
+  --background-color: #EFF3F6;
+
+
+
+  --light-text: #616161;
 }
 
 body {
