@@ -1,108 +1,72 @@
-#carousel-slider {
-    position: relative;
-    /* Removed flex centering for the container itself; let absolute positioning handle the buttons and dots */
-    width: 100%;
-    /* overflow hidden is vital when elements have transitions */
-    overflow: hidden; 
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow like reference app */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: calc(100% - 100px);
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 20px 0;
 }
 
-.carousel {
-    width: 100%;
-    height: 400px; /* Fixed height for the banner area */
-    position: relative;
+.carousel-viewport {
+  width: 100%;
+  overflow: hidden;
 }
 
-/* Base style for ALL slides */
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Fade transition for polished UX */
-    opacity: 0;
-    transition: opacity 0.6s ease-in-out;
-    z-index: 1; /* Non-active slides below everything */
+/* Flex container holding all slides side-by-side */
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
 }
 
-/* Style for the active slide */
-.slide.active {
-    opacity: 1;
-    z-index: 2; /* Move active slide to top */
+/* Each slide takes up 80% width, leaving 20% total (10% on each side) for side banners */
+.carousel-slide {
+  flex: 0 0 80%; /* Do not grow, do not shrink, fix width to 80% */
+  padding: 0 10px;
+  box-sizing: border-box;
+  opacity: 0.6;
+  transform: scale(0.9);
+  transition: all 0.5s ease-in-out;
 }
 
-.carousel-banner-img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    display: block;
+/* The centered/active slide */
+.carousel-slide.active {
+  opacity: 1;
+  transform: scale(1); /* Full size for the active banner */
 }
 
-/* Overlaid arrows styling */
+.carousel-slide img {
+  width: 100%;
+  /* height: 380px; */
+  object-fit: fill;
+  aspect-ratio: 90 / 35;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Overlay Navigation Buttons */
 .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    /* Matching standard semi-transparent overlay UX */
-    background: rgba(255, 255, 255, 0.85); 
-    border: none;
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    cursor: pointer;
-    z-index: 10; /* Buttons always above images */
-    transition: background 0.2s ease, transform 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #1e3a8a; /* Unified blue brand color derived from wireframe image */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: #ffffff;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
 }
 
-.carousel-btn:hover {
-    background: rgba(255, 255, 255, 1);
-    transform: translateY(-50%) scale(1.05); /* Subtle scale effect */
+.left-btn {
+  left: 3%;
 }
 
-.nav-icon {
-    font-size: 22px;
-}
-
-.left-slider {
-    left: 20px;
-}
-
-.right-slider {
-    right: 20px;
-}
-
-/* NEW: Pagination Dots container/style */
-.carousel-pagination {
-    position: absolute;
-    bottom: 20px; /* Offset from bottom */
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 8px;
-    z-index: 10; /* Dots above images */
-}
-
-.pagination-dot {
-    width: 10px;
-    height: 10px;
-    background-color: rgba(0, 0, 0, 0.3); /* Transparent dark for inactive */
-    border: 2px solid #fff;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease, width 0.3s ease;
-    padding: 0;
-}
-
-.pagination-dot.active {
-    /* Using bright brand green highlight derived from reference wireframe */
-    background-color: #4ade80; 
-    border-color: #fff;
-    width: 12px; /* Slight highlight width change */
-    height: 12px;
+.right-btn {
+  right: 3%;
 }
