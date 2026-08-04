@@ -2,8 +2,8 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import festiveDeals from "../assets/carousel/festive-deals.png";
-import banner2 from "../assets/carousel/festive-deals.png";
-import banner3 from "../assets/carousel/festive-deals.png";
+import banner2 from "../assets/carousel/gaming.png";
+import banner3 from "../assets/carousel/wellness.png";
 import "./Carousel.css";
 
 const SLIDES = [

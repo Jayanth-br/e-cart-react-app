@@ -43,5 +43,86 @@
         "rating": 4.3,
         "reviews": 123,
         "price": 22999
+    },
+    {
+        "id": 6,
+        "image": "../../../public/onePlus.jpg",
+        "title": "OnePlus N6",
+        "info": "Aether Green, 8GB/128GB",
+        "rating": 4.3,
+        "reviews": 123,
+        "price": 22999
+    },
+    {
+        "id": 7,
+        "image": "../../../public/onePlus.jpg",
+        "title": "OnePlus N6",
+        "info": "Aether Green, 8GB/128GB",
+        "rating": 4.3,
+        "reviews": 123,
+        "price": 22999
+    },
+    {
+        "id": 8,
+        "image": "../../../public/onePlus.jpg",
+        "title": "OnePlus N6",
+        "info": "Aether Green, 8GB/128GB",
+        "rating": 4.3,
+        "reviews": 123,
+        "price": 22999
+    },
+    {
+        "id": 9,
+        "image": "../../../public/onePlus.jpg",
+        "title": "OnePlus N6",
+        "info": "Aether Green, 8GB/128GB",
+        "rating": 4.3,
+        "reviews": 123,
+        "price": 22999
+    },
+    {
+        "id": 10,
+        "image": "../../../public/onePlus.jpg",
+        "title": "OnePlus N6",
+        "info": "Aether Green, 8GB/128GB",
+        "rating": 4.3,
+        "reviews": 123,
+        "price": 22999
+    },
+    {
+        "id": 11,
+        "image": "../../../public/onePlus.jpg",
+        "title": "OnePlus N6",
+        "info": "Aether Green, 8GB/128GB",
+        "rating": 4.3,
+        "reviews": 123,
+        "price": 22999
+    },
+    {
+        "id": 12,
+        "image": "../../../public/onePlus.jpg",
+        "title": "OnePlus N6",
+        "info": "Aether Green, 8GB/128GB",
+        "rating": 4.3,
+        "reviews": 123,
+        "price": 22999
+    },
+    {
+        "id": 13,
+        "image": "../../../public/onePlus.jpg",
+        "title": "OnePlus N6",
+        "info": "Aether Green, 8GB/128GB",
+        "rating": 4.3,
+        "reviews": 123,
+        "price": 22999
+    },
+    {
+        "id": 14,
+        "image": "../../../public/onePlus.jpg",
+        "title": "OnePlus N6",
+        "info": "Aether Green, 8GB/128GB",
+        "rating": 4.3,
+        "reviews": 123,
+        "price": 22999
     }
 ]

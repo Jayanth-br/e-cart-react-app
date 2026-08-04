@@ -1,7 +1,7 @@
 .carousel-wrapper {
   position: relative;
   width: 100%;
-  max-width: calc(100% - 100px);
+  max-width: calc(100% - 120px);
   margin: 0 auto;
   overflow: hidden;
   padding: 20px 0;
@@ -12,16 +12,14 @@
   overflow: hidden;
 }
 
-/* Flex container holding all slides side-by-side */
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
   width: 100%;
 }
 
-/* Each slide takes up 80% width, leaving 20% total (10% on each side) for side banners */
 .carousel-slide {
-  flex: 0 0 80%; /* Do not grow, do not shrink, fix width to 80% */
+  flex: 0 0 80%;
   padding: 0 10px;
   box-sizing: border-box;
   opacity: 0.6;
@@ -29,10 +27,9 @@
   transition: all 0.5s ease-in-out;
 }
 
-/* The centered/active slide */
 .carousel-slide.active {
   opacity: 1;
-  transform: scale(1); /* Full size for the active banner */
+  transform: scale(1);
 }
 
 .carousel-slide img {
