@@ -19,7 +19,7 @@ function NavBar() {
             <div className="nav-bar-middle-section">
                 <input type="text" id="nav-search-bar" className="search-bar" placeholder="Search for Products..."/>
                 
-                <button className="nav-bar-search-btn">
+                <button className="nav-bar-search-btn" title="Search">
                     <FontAwesomeIcon icon={faMagnifyingGlass} style={{color: "#255fa6", height: "25px", padding: "4px 8px"}} />
                 </button>
             </div>
