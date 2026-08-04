@@ -10,7 +10,7 @@ function Home() {
             <NavBar />
             <Carousel />
             <section className="home-page-body-section">
-                <ProductList products={products}/>
+                <ProductList products={products} title={"Featured Products"}/>
             </section>
         </>
         
