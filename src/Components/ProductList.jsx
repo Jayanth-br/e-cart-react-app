@@ -10,7 +10,7 @@ function ProductCard({title, products}) {
             <ul className="product-list">
                 {products.map((product) => (
                     <li className="product" key={product.id}>
-                        <img src={product.image} alt={product.title} height={220} width={220}/>
+                        <img src={product.image} alt={product.title} height={220} className="product-img"/>
                         <h3 className="product-title">{product.title}</h3>
                         <p className="product-info">{product.info}</p>
                         <p className="product-rating">
