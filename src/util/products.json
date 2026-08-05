@@ -1,75 +1,75 @@
 [
     {
         "id": 1,
-        "image": "../../../public/onePlus.jpg",
-        "title": "OnePlus N6",
-        "info": "Aether Green, 8GB/128GB",
-        "rating": 4.3,
-        "reviews": 123,
-        "price": 22999
+        "image": "../../../public/iphone_17.webp",
+        "title": "iPhone 17",
+        "info": "Black, 512GB",
+        "rating": 4.6,
+        "reviews": 21207,
+        "price": 99999
     },
-    {
+     {
         "id": 2,
-        "image": "../../../public/onePlus.jpg",
-        "title": "OnePlus N6",
-        "info": "Aether Green, 8GB/128GB",
-        "rating": 4.3,
-        "reviews": 123,
-        "price": 22999
+        "image": "../../../public/pixel_watch.webp",
+        "title": "Google Pixel Watch 4",
+        "info": "Porcelain Strap, Free Size",
+        "rating": 4.7,
+        "reviews": 165,
+        "price": 43400
     },
     {
         "id": 3,
-        "image": "../../../public/onePlus.jpg",
-        "title": "OnePlus N6",
-        "info": "Aether Green, 8GB/128GB",
-        "rating": 4.3,
-        "reviews": 123,
-        "price": 22999
+        "image": "../../../public/mac_air.webp",
+        "title": "Apple MacBook Air (M5)",
+        "info": "Starlight, 16GB | 512GB",
+        "rating": 4.8,
+        "reviews": 1034,
+        "price": 149000
     },
     {
         "id": 4,
-        "image": "../../../public/onePlus.jpg",
-        "title": "OnePlus N6",
-        "info": "Aether Green, 8GB/128GB",
-        "rating": 4.3,
-        "reviews": 123,
-        "price": 22999
+        "image": "../../../public/play_station5.webp",
+        "title": "SONY PS5 Console",
+        "info": "White, 1TB",
+        "rating": 4.7,
+        "reviews": 6841,
+        "price": 69990
     },
     {
         "id": 5,
-        "image": "../../../public/onePlus.jpg",
-        "title": "OnePlus N6",
-        "info": "Aether Green, 8GB/128GB",
-        "rating": 4.3,
-        "reviews": 123,
-        "price": 22999
+        "image": "../../../public/samsung_tv.webp",
+        "title": "Samsung Crystal",
+        "info": "Black, 55 | UHD",
+        "rating": 4.5,
+        "reviews": 147,
+        "price": 49499
     },
     {
         "id": 6,
-        "image": "../../../public/onePlus.jpg",
-        "title": "OnePlus N6",
-        "info": "Aether Green, 8GB/128GB",
+        "image": "../../../public/electric_geyser.webp",
+        "title": "V-Guard Storage Water Geyser",
+        "info": "White, 15L",
         "rating": 4.3,
-        "reviews": 123,
-        "price": 22999
+        "reviews": 694,
+        "price": 6799
     },
     {
         "id": 7,
-        "image": "../../../public/onePlus.jpg",
-        "title": "OnePlus N6",
-        "info": "Aether Green, 8GB/128GB",
-        "rating": 4.3,
-        "reviews": 123,
-        "price": 22999
+        "image": "../../../public/wildcraft.webp",
+        "title": "WildCraft Bag",
+        "info": "Red, 12L",
+        "rating": 4.4,
+        "reviews": 765,
+        "price": 999
     },
     {
         "id": 8,
-        "image": "../../../public/onePlus.jpg",
-        "title": "OnePlus N6",
-        "info": "Aether Green, 8GB/128GB",
-        "rating": 4.3,
-        "reviews": 123,
-        "price": 22999
+        "image": "../../../public/MRF_bat.webp",
+        "title": "MRF Cricket Bat",
+        "info": "For 11-13 Yrs, 1.2KG",
+        "rating": 4.1,
+        "reviews": 3849,
+        "price": 230
     },
     {
         "id": 9,

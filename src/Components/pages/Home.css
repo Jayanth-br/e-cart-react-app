@@ -29,7 +29,11 @@
 .product-rating {
     font-size: 12px;
 }
-
+.product-img {
+    object-fit: contain;
+    width: 100%;
+    margin-bottom: 5px;
+}
 .product-info,
 .product-rating,
 .product-price {
