@@ -82,47 +82,11 @@
     },
     {
         "id": 10,
-        "image": "../../../public/onePlus.jpg",
-        "title": "OnePlus N6",
-        "info": "Aether Green, 8GB/128GB",
-        "rating": 4.3,
-        "reviews": 123,
-        "price": 22999
-    },
-    {
-        "id": 11,
-        "image": "../../../public/onePlus.jpg",
-        "title": "OnePlus N6",
-        "info": "Aether Green, 8GB/128GB",
-        "rating": 4.3,
-        "reviews": 123,
-        "price": 22999
-    },
-    {
-        "id": 12,
-        "image": "../../../public/onePlus.jpg",
-        "title": "OnePlus N6",
-        "info": "Aether Green, 8GB/128GB",
-        "rating": 4.3,
-        "reviews": 123,
-        "price": 22999
-    },
-    {
-        "id": 13,
-        "image": "../../../public/onePlus.jpg",
-        "title": "OnePlus N6",
-        "info": "Aether Green, 8GB/128GB",
-        "rating": 4.3,
-        "reviews": 123,
-        "price": 22999
-    },
-    {
-        "id": 14,
-        "image": "../../../public/onePlus.jpg",
-        "title": "OnePlus N6",
-        "info": "Aether Green, 8GB/128GB",
-        "rating": 4.3,
-        "reviews": 123,
-        "price": 22999
+        "image": "../../../public/atomberg_juice_mixer.webp",
+        "title": "Atomberg Althea Cold Press",
+        "info": "Midnight Black, 200W Juicer",
+        "rating": 4.4,
+        "reviews": 116,
+        "price": 14999
     }
 ]
