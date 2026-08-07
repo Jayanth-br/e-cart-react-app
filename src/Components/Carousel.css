@@ -1,7 +1,10 @@
+/* --- Base Styles & Variables --- */
 .carousel-wrapper {
+  --slide-width: 80%;
+  --slide-offset: 10%;
   position: relative;
   width: 100%;
-  max-width: calc(100% - 120px);
+  max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
   padding: 20px 0;
@@ -14,17 +17,17 @@
 
 .carousel-track {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
   width: 100%;
 }
 
 .carousel-slide {
-  flex: 0 0 80%;
+  flex: 0 0 var(--slide-width);
   padding: 0 10px;
   box-sizing: border-box;
-  opacity: 0.6;
-  transform: scale(0.9);
-  transition: all 0.5s ease-in-out;
+  opacity: 0.5;
+  transform: scale(0.92);
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .carousel-slide.active {
@@ -34,11 +37,12 @@
 
 .carousel-slide img {
   width: 100%;
-  /* height: 380px; */
-  object-fit: fill;
-  aspect-ratio: 90 / 35;
+  height: auto;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  display: block;
 }
 
 /* Overlay Navigation Buttons */
@@ -47,7 +51,7 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.9);
   border: none;
   width: 44px;
   height: 44px;
@@ -58,12 +62,69 @@
   align-items: center;
   justify-content: center;
   font-size: 18px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-btn:hover {
+  background: #ffffff;
+  transform: translateY(-50%) scale(1.08);
 }
 
 .left-btn {
-  left: 3%;
+  left: 2%;
 }
 
 .right-btn {
-  right: 3%;
+  right: 2%;
+}
+
+/* --- Tablet Responsiveness --- */
+@media (max-width: 900px) {
+  .carousel-wrapper {
+    --slide-width: 85%;
+    --slide-offset: 7.5%;
+    padding: 15px 0;
+  }
+
+  .carousel-slide img {
+    aspect-ratio: 16 / 8;
+  }
+
+  .carousel-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 600px) {
+  .carousel-wrapper {
+    --slide-width: 92%;
+    --slide-offset: 4%;
+    padding: 10px 0;
+  }
+
+  .carousel-slide {
+    padding: 0 5px;
+  }
+
+  .carousel-slide img {
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+  }
+
+  .carousel-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .left-btn {
+    left: 1%;
+  }
+
+  .right-btn {
+    right: 1%;
+  }
 }
