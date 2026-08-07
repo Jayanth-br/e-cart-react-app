@@ -12,15 +12,19 @@ function NavBar() {
                     width="40" height="40" 
                     className="nav-bar-logo-img"
                     alt="e-kart logo"
-                ></img>
+                />
                 <h1 className="nav-bar-logo-name">e-kart</h1>
             </div>
 
             <div className="nav-bar-middle-section">
-                <input type="text" id="nav-search-bar" className="search-bar" placeholder="Search for Products..."/>
-                
+                <input 
+                    type="text" 
+                    id="nav-search-bar" 
+                    className="search-bar" 
+                    placeholder="Search for Products..."
+                />
                 <button className="nav-bar-search-btn" title="Search">
-                    <FontAwesomeIcon icon={faMagnifyingGlass} style={{color: "#255fa6", height: "25px", padding: "4px 8px"}} />
+                    <FontAwesomeIcon icon={faMagnifyingGlass} style={{color: "#255fa6", fontSize: "18px"}} />
                 </button>
             </div>
 
@@ -29,8 +33,8 @@ function NavBar() {
                 <button className="cart-btn nav-bar-btn">Cart</button>
                 <button className="profile-btn nav-bar-btn">Profile</button>
             </div>
-            
         </nav>
-    )
+    );
 }
+
 export default NavBar;

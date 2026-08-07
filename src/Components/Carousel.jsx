@@ -26,7 +26,11 @@ function Carousel() {
   return (
     <div className="carousel-wrapper">
       {/* Navigation Buttons */}
-      <button className="carousel-btn left-btn" onClick={prevSlide}>
+      <button 
+        className="carousel-btn left-btn" 
+        onClick={prevSlide}
+        aria-label="Previous Slide"
+      >
         <FontAwesomeIcon icon={faAngleLeft} />
       </button>
 
@@ -35,7 +39,7 @@ function Carousel() {
         <div
           className="carousel-track"
           style={{
-            transform: `translateX(calc(-${currentIndex * 80}% + 10%))`,
+            transform: `translateX(calc(-${currentIndex} * var(--slide-width) + var(--slide-offset)))`,
           }}
         >
           {SLIDES.map((slide, index) => {
@@ -52,7 +56,11 @@ function Carousel() {
         </div>
       </div>
 
-      <button className="carousel-btn right-btn" onClick={nextSlide}>
+      <button 
+        className="carousel-btn right-btn" 
+        onClick={nextSlide}
+        aria-label="Next Slide"
+      >
         <FontAwesomeIcon icon={faAngleRight} />
       </button>
     </div>
