@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "image": "../../../public/iphone_17.webp",
+        "image": "/iphone_17.webp",
         "title": "iPhone 17",
         "info": "Black, 512GB",
         "rating": 4.6,
@@ -10,7 +10,7 @@
     },
      {
         "id": 2,
-        "image": "../../../public/pixel_watch.webp",
+        "image": "/pixel_watch.webp",
         "title": "Google Pixel Watch 4",
         "info": "Porcelain Strap, Free Size",
         "rating": 4.7,
@@ -19,7 +19,7 @@
     },
     {
         "id": 3,
-        "image": "../../../public/mac_air.webp",
+        "image": "/mac_air.webp",
         "title": "Apple MacBook Air (M5)",
         "info": "Starlight, 16GB | 512GB",
         "rating": 4.8,
@@ -28,7 +28,7 @@
     },
     {
         "id": 4,
-        "image": "../../../public/play_station5.webp",
+        "image": "/play_station5.webp",
         "title": "SONY PS5 Console",
         "info": "White, 1TB",
         "rating": 4.7,
@@ -37,7 +37,7 @@
     },
     {
         "id": 5,
-        "image": "../../../public/samsung_tv.webp",
+        "image": "/samsung_tv.webp",
         "title": "Samsung Crystal",
         "info": "Black, 55 | UHD",
         "rating": 4.5,
@@ -46,7 +46,7 @@
     },
     {
         "id": 6,
-        "image": "../../../public/electric_geyser.webp",
+        "image": "/electric_geyser.webp",
         "title": "V-Guard Storage Water Geyser",
         "info": "White, 15L",
         "rating": 4.3,
@@ -55,7 +55,7 @@
     },
     {
         "id": 7,
-        "image": "../../../public/wildcraft.webp",
+        "image": "/wildcraft.webp",
         "title": "WildCraft Bag",
         "info": "Red, 12L",
         "rating": 4.4,
@@ -64,7 +64,7 @@
     },
     {
         "id": 8,
-        "image": "../../../public/MRF_bat.webp",
+        "image": "/MRF_bat.webp",
         "title": "MRF Cricket Bat",
         "info": "For 11-13 Yrs, 1.2KG",
         "rating": 4.1,
@@ -73,7 +73,7 @@
     },
     {
         "id": 9,
-        "image": "../../../public/onePlus.jpg",
+        "image": "/onePlus.jpg",
         "title": "OnePlus N6",
         "info": "Aether Green, 8GB/128GB",
         "rating": 4.3,
@@ -82,7 +82,7 @@
     },
     {
         "id": 10,
-        "image": "../../../public/atomberg_juice_mixer.webp",
+        "image": "/atomberg_juice_mixer.webp",
         "title": "Atomberg Althea Cold Press",
         "info": "Midnight Black, 200W Juicer",
         "rating": 4.4,
