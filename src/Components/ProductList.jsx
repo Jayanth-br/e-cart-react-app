@@ -2,6 +2,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 function ProductCard({title, products}) {
+
+    function onClickProduct(product){
+        console.log(product);
+        
+        
+    }
+
     return (
         <>
             { title && 
@@ -9,7 +16,7 @@ function ProductCard({title, products}) {
             }
             <ul className="product-list">
                 {products.map((product) => (
-                    <li className="product" key={product.id}>
+                    <li className="product-card" key={product.id} onClick={() => onClickProduct(product)}>
                         <img src={product.image} alt={product.title} height={220} className="product-img"/>
                         <h3 className="product-title">{product.title}</h3>
                         <p className="product-info">{product.info}</p>
