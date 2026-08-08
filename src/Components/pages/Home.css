@@ -15,12 +15,13 @@
     margin: 0;
     padding: 20px 20px 0px 20px;
 }
-.product {
+.product-card {
     list-style: none;
     border-radius: 6px;
     background-color: #ffffff;
     box-shadow: 1px 1px 1px 1px #ebebeb;
     padding: 15px;
+    cursor: pointer;
 }
 .product-title {
     margin: 0;
