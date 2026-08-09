@@ -7,7 +7,6 @@ function ProductCard({title, products}) {
     const navigate = useNavigate();
 
     function onClickProduct(product){
-        console.log(product);
         navigate(`/product/${product.id}`);
         
     }

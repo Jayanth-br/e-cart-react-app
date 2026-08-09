@@ -4,10 +4,12 @@ import './index.css'
 import Home from './Components/pages/Home.jsx'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import Product from './Components/pages/Product.jsx'
+import NavBar from './Components/NavBar.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
 
+    <NavBar />
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Navigate to="/home" replace/>}/>
@@ -16,6 +18,6 @@ createRoot(document.getElementById('root')).render(
         <Route path='/product/:productId' element={<Product />}/>
       </Routes>
     </BrowserRouter>
-    
+   
   </StrictMode>
 )
