@@ -1,11 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 function ProductCard({title, products}) {
 
+    const navigate = useNavigate();
+
     function onClickProduct(product){
         console.log(product);
-        
+        navigate(`/product/${product.id}`);
         
     }
 
