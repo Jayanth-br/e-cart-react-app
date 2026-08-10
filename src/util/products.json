@@ -4,6 +4,9 @@
         "image": "/iphone_17.webp",
         "title": "iPhone 17",
         "info": "Black, 512GB",
+        "colors": [
+            "#323436", "#D4C1DA", "#8BA2C3", "#DBDBD9", "#A0AB83"
+        ],
         "rating": 4.6,
         "reviews": 21207,
         "price": 99999
