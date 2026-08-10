@@ -4,6 +4,10 @@ function ProductDetail({ productId }) {
 
     const product = products.find((p) => p.id === Number(productId));
 
+    function handleColorPicker(){
+        console.log("color");
+    }
+
     return (
 
         <>
@@ -25,6 +29,22 @@ function ProductDetail({ productId }) {
                     <div className="product-right-section">
                         <h1 style={{ marginBottom: "10px" }}>{product.title}</h1>
                         <h2>₹{product.price.toLocaleString('en-IN')}</h2>
+
+
+                        { product.colors && 
+
+                        <div className="color-selector-section">
+                            { product.colors.map((color, idx) =>  ( 
+                                <div 
+                                    key={idx} 
+                                    style={{ backgroundColor: color }}
+                                    className="product-color-selector"
+                                    onClick={() => handleColorPicker()}
+                                ></div> ) ) 
+                            }
+                        </div>
+                            
+                        }
 
 
                         <button className="product-page-btn">Add to Cart</button>
