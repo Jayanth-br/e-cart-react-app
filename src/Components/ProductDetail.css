@@ -35,7 +35,7 @@
 
 .color-selector-section {
     display: flex;
-    gap: 5px;
+    gap: 10px;
     margin: 10px 0px;
     cursor: pointer;
 }
@@ -48,4 +48,27 @@
     height: 30px;
     width: 30px;
     border-radius: 50%;
+}
+
+
+/* .color-swatches {
+    display: flex;
+    gap: 12px;
+    margin: 10px 0 20px;
+} */
+
+.product-color-selector {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.2s ease, outline 0.2s ease;
+}
+
+/* Active indicator ring */
+.product-color-selector.active {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 1px;
+    /* transform: scale(1.1); */
 }
