@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import products from "./../util/products.json";
 import "./ProductDetail.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 function ProductDetail({ productId }) {
 
     const product = products.find((p) => p.id === Number(productId));
@@ -9,10 +11,10 @@ function ProductDetail({ productId }) {
 
     useEffect(() => {
         console.log("Ran Use Effect");
-        if(product && product.colors.length > 0){
+        if(product && product.colors && product.colors.length > 0){
             setSelectedColor(product.colors[0].name);
         }
-    }, [])
+    }, [product])
 
     function handleColorPicker(color){
         console.log(color);
@@ -38,7 +40,7 @@ function ProductDetail({ productId }) {
                     </div>
 
                     <div className="product-right-section">
-                        <h1 style={{ marginBottom: "10px" }}>{product.title}</h1>
+                        <h1>{product.title}</h1>
                         <h2>₹{product.price.toLocaleString('en-IN')}</h2>
 
                         { product.colors && 
@@ -50,15 +52,26 @@ function ProductDetail({ productId }) {
                                 { product.colors.map((color, idx) =>  ( 
                                     <div 
                                         key={idx} 
-                                        style={{ backgroundColor: color.color }}
+                                        style={{ backgroundColor: color.color, outline: `2px solid ${color.color}` }}
                                         className={`product-color-selector ${selectedColor == color.name ? `active` : ""}`}
                                         onClick={() => handleColorPicker(color.name)}
                                     ></div> ) ) 
                                 }
                             </div>
-                        </>                        
-                            
+                        </>
                         }
+
+                        <div>
+                            <h3 style={{ marginBottom: "5px" }}>Ratings</h3>
+                            <p 
+                                className="product-rating" style={{ padding: "0px" }}>
+                                <FontAwesomeIcon icon={faStar} 
+                                style={{color: "#255fa6"}} 
+                            />
+                            {product.rating}  ({product.reviews})</p>
+                        </div>
+
+                        
 
                         <button className="product-page-btn">Add to Cart</button>
                         <button className="product-page-btn">Buy Now</button>

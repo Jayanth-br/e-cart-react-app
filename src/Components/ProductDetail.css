@@ -21,6 +21,8 @@
     display: flex;
     flex-direction: column;
     padding: 40px;
+    justify-content: stretch;
+    gap: 10px;
 }
 
 .product-page-btn {
@@ -29,14 +31,14 @@
     border: none;
     padding: 8px;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     cursor: pointer;
 }
 
 .color-selector-section {
     display: flex;
     gap: 10px;
-    margin: 10px 0px;
+    margin: 2px 0px 10px 0px;
     cursor: pointer;
 }
 
@@ -50,13 +52,6 @@
     border-radius: 50%;
 }
 
-
-/* .color-swatches {
-    display: flex;
-    gap: 12px;
-    margin: 10px 0 20px;
-} */
-
 .product-color-selector {
     width: 32px;
     height: 32px;
@@ -66,9 +61,16 @@
     transition: transform 0.2s ease, outline 0.2s ease;
 }
 
-/* Active indicator ring */
 .product-color-selector.active {
     outline: 2px solid var(--primary-color);
     outline-offset: 1px;
-    /* transform: scale(1.1); */
+}
+
+.product-title {
+    margin: 0;
+    padding: 2px 4px;
+}
+.product-rating {
+    font-size: 12px;
+    margin-bottom: 10px;
 }
