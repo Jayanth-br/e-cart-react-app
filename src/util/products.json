@@ -1,29 +1,34 @@
 [
     {
         "id": 1,
-        "image": "/iphone_17.webp",
+        "image": "/iphone17/iphone_17_black.webp",
         "title": "iPhone 17",
         "info": "Black, 512GB",
         "colors": [
            {
             "name": "Black",
-            "color": "#323436"
+            "color": "#323436",
+            "image": "/iphone17/iphone_17_black.webp"
            }, 
            {
             "name": "Lavender",
-            "color": "#D4C1DA"
+            "color": "#D4C1DA",
+            "image": "/iphone17/iphone_17_lavender.webp"
            },
            {
             "name": "Mist Blue",
-            "color": "#8BA2C3"
+            "color": "#8BA2C3",
+            "image": "/iphone17/iphone_17_mist_blue.webp"
            },
            {
             "name": "White",
-            "color": "#DBDBD9"
+            "color": "#DBDBD9",
+            "image": "/iphone17/iphone_17_white.webp"
            },
            {
             "name": "Sage",
-            "color": "#A0AB83"
+            "color": "#A0AB83",
+            "image": "/iphone17/iphone_17_sage.webp"
            }
         ],
         "rating": 4.6,

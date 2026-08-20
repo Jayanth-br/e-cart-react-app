@@ -8,6 +8,7 @@ function ProductDetail({ productId }) {
     const product = products.find((p) => p.id === Number(productId));
 
     const [selectedColor, setSelectedColor] = useState("");
+    const [currentImage, setCurrentImage] = useState(product.image);
 
     useEffect(() => {
         console.log("Ran Use Effect");
@@ -17,8 +18,8 @@ function ProductDetail({ productId }) {
     }, [product])
 
     function handleColorPicker(color){
-        console.log(color);
-        setSelectedColor(color);
+        setSelectedColor(color.name);
+        setCurrentImage(color.image);
     }
 
     return (
@@ -33,7 +34,7 @@ function ProductDetail({ productId }) {
                         <img 
                             className="product-image"
                             height="500px"
-                            src={product.image} 
+                            src={currentImage} 
                             alt={product.info} />
 
                         <p className="product-info">{selectedColor}</p>
@@ -54,7 +55,7 @@ function ProductDetail({ productId }) {
                                         key={idx} 
                                         style={{ backgroundColor: color.color, outline: `2px solid ${color.color}` }}
                                         className={`product-color-selector ${selectedColor == color.name ? `active` : ""}`}
-                                        onClick={() => handleColorPicker(color.name)}
+                                        onClick={() => handleColorPicker(color)}
                                     ></div> ) ) 
                                 }
                             </div>
