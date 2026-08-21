@@ -4,54 +4,98 @@
         "image": "/iphone17/iphone_17_black.webp",
         "title": "iPhone 17",
         "info": "Black, 512GB",
-        "colors": [
-           {
-            "name": "Black",
-            "color": "#323436",
-            "image": "/iphone17/iphone_17_black.webp"
-           }, 
-           {
-            "name": "Lavender",
-            "color": "#D4C1DA",
-            "image": "/iphone17/iphone_17_lavender.webp"
-           },
-           {
-            "name": "Mist Blue",
-            "color": "#8BA2C3",
-            "image": "/iphone17/iphone_17_mist_blue.webp"
-           },
-           {
-            "name": "White",
-            "color": "#DBDBD9",
-            "image": "/iphone17/iphone_17_white.webp"
-           },
-           {
-            "name": "Sage",
-            "color": "#A0AB83",
-            "image": "/iphone17/iphone_17_sage.webp"
-           }
-        ],
         "rating": 4.6,
         "reviews": 21207,
-        "price": 99999
+        "price": 99999,
+        "colors": [
+           {
+                "name": "Black",
+                "color": "#323436",
+                "image": "/iphone17/iphone_17_black.webp"
+           }, 
+           {
+                "name": "Lavender",
+                "color": "#D4C1DA",
+                "image": "/iphone17/iphone_17_lavender.webp"
+           },
+           {
+                "name": "Mist Blue",
+                "color": "#8BA2C3",
+                "image": "/iphone17/iphone_17_mist_blue.webp"
+           },
+           {
+                "name": "White",
+                "color": "#DBDBD9",
+                "image": "/iphone17/iphone_17_white.webp"
+           },
+           {
+                "name": "Sage",
+                "color": "#A0AB83",
+                "image": "/iphone17/iphone_17_sage.webp"
+           }
+        ]
     },
-     {
+    {
         "id": 2,
-        "image": "/pixel_watch.webp",
+        "image": "/pixel_watch_4/pixel_watch_porcelain.webp",
         "title": "Google Pixel Watch 4",
         "info": "Porcelain Strap, Free Size",
         "rating": 4.7,
         "reviews": 165,
-        "price": 43400
+        "price": 43400,
+        "colors": [
+            {
+                "name": "Porcelain",
+                "color": "#B6ABA8",
+                "image": "/pixel_watch_4/pixel_watch_porcelain.webp"
+            },
+            {
+                "name": "Iris",
+                "color": "#ADB8D6",
+                "image": "/pixel_watch_4/pixel_watch_iris.webp"
+            },
+            {
+                "name": "Obsidian",
+                "color": "#363636",
+                "image": "/pixel_watch_4/pixel_watch_obsidian.webp"
+            },
+            {
+                "name": "Moonstone",
+                "color": "#6C7281",
+                "image": "/pixel_watch_4/pixel_watch_moonstone.webp"
+            }
+        ]
     },
     {
         "id": 3,
-        "image": "/mac_air.webp",
+        "image": "/macbook_air/starlight.webp",
         "title": "Apple MacBook Air (M5)",
         "info": "Starlight, 16GB | 512GB",
         "rating": 4.8,
         "reviews": 1034,
-        "price": 149000
+        "price": 149000,
+        "colors": [
+            {
+                "name": "Starlight",
+                "color": "#DDD6CD",
+                "image": "/macbook_air/starlight.webp"
+            },
+            {
+                "name": "Sky Blue",
+                "color": "#C2CCD1",
+                "image": "/macbook_air/skyblue.webp"
+            },
+            {
+                "name": "Midnight",
+                "color": "#424955",
+                "image": "/macbook_air/midnight.webp"
+            },
+            {
+                "name": "Silver",
+                "color": "#D0D2D3",
+                "image": "/macbook_air/silver.webp"
+            }
+        ]
     },
     {
         "id": 4,
