@@ -5,19 +5,22 @@ import Home from './Components/pages/Home.jsx'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import Product from './Components/pages/Product.jsx'
 import NavBar from './Components/NavBar.jsx'
+import { CartProvider } from './Components/CartContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
 
     <NavBar />
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Navigate to="/home" replace/>}/>
-        <Route path='/home' element={<Home />}/>
 
-        <Route path='/product/:productId' element={<Product />}/>
-      </Routes>
-    </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Navigate to="/home" replace/>}/>
+          <Route path='/home' element={<Home />}/>
+          <Route path='/product/:productId' element={<Product />}/>
+        </Routes>
+      </BrowserRouter>
+    </CartProvider>
    
   </StrictMode>
 )

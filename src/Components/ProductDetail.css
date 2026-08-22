@@ -1,10 +1,10 @@
 .product-detail-section {
-    max-width: 1200px;
+    max-width: 1300px;
     border-radius: 12px;
     margin: 80px auto;
     box-shadow: 1px 1px 3px 3px #eee, -1px -1px 3px 3px #eee;
     display: grid;
-    grid-template-columns: 1fr 0.6fr;
+    grid-template-columns: auto 450px;
 }
 
 .product-left-section {
@@ -73,4 +73,9 @@
 .product-rating {
     font-size: 12px;
     margin-bottom: 10px;
+}
+
+.product-specification {
+    font-size: 14px;
+    
 }

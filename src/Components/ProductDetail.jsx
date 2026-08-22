@@ -70,6 +70,11 @@ function ProductDetail({ productId }) {
                                 style={{color: "#255fa6"}} 
                             />
                             {product.rating}  ({product.reviews})</p>
+
+                            <h3 style={{marginBottom: "5px"}}>Specs</h3>
+                            <p className="product-specification">
+                                {product.info}
+                            </p>
                         </div>
 
                         
