@@ -2,12 +2,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import "../Components/ProductList.css";
+import { useCart } from "./CartContext";
 function ProductCard({title, products}) {
 
     const navigate = useNavigate();
 
+    const { addToCart } = useCart();
+
     function onClickProduct(product){
         navigate(`/product/${product.id}`);
+    }
+
+    function handleAddToCart(event, product){
+        event.stopPropagation();
+        addToCart(product);  
     }
 
     return (
@@ -40,7 +48,8 @@ function ProductCard({title, products}) {
                             ₹{product.price.toLocaleString('en-IN')}</p>
 
                         <button 
-                            className="add-to-cart-btn">
+                            className="add-to-cart-btn"
+                            onClick={(e) => handleAddToCart(e, product)}>
                             Add to Cart
                         </button>
                     </li>
