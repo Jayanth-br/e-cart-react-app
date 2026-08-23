@@ -5,20 +5,25 @@ export function CartProvider({ children }) {
 
     const[cart, setCart] = useState([]);
 
-    function addToCart(product, selectedColor = null) {
+    const addToCart = (product, selectedColor = null) => {
         setCart((prevCart) => {
-            const existingIds = prevCart.findIndex(
-                (item) => item.id == product.id && item.selectedColor == selectedColor
+            const existing = prevCart.find(
+            (item) => item.id === product.id && item.selectedColor === selectedColor
             );
 
-            if(existingIds > -1){
-                const updatedCart = [...prevCart];
-                updatedCart[existingIds].quantity += 1;
-                return updatedCart;
+            // If item exists, create a brand-new object with the updated quantity
+            if (existing) {
+            return prevCart.map((item) =>
+                item.id === product.id && item.selectedColor === selectedColor
+                ? { ...item, quantity: item.quantity + 1 }
+                : item
+            );
             }
-            return [...prevCart, { ...product, quantity: 1, selectedColor }];
-        })
-    }
+
+            // If new item, add it to array with quantity: 1
+            return [...prevCart, { ...product, selectedColor, quantity: 1 }];
+        });
+    };
 
     function removeFromCart(productId, selectedColor){
         setCart((prevCart) => 

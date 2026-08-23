@@ -3,12 +3,14 @@ import products from "./../util/products.json";
 import "./ProductDetail.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { useCart } from "./CartContext";
 function ProductDetail({ productId }) {
 
     const product = products.find((p) => p.id === Number(productId));
 
     const [selectedColor, setSelectedColor] = useState("");
     const [currentImage, setCurrentImage] = useState(product.image);
+    const { addToCart } = useCart();
 
     useEffect(() => {
         console.log("Ran Use Effect");
@@ -20,6 +22,13 @@ function ProductDetail({ productId }) {
     function handleColorPicker(color){
         setSelectedColor(color.name);
         setCurrentImage(color.image);
+    }
+
+    function handleAddToCart(product){
+        if(product.colors){
+            product.selectedColor = product.colors[0].name;
+        }
+        addToCart(product);  
     }
 
     return (
@@ -79,7 +88,11 @@ function ProductDetail({ productId }) {
 
                         
 
-                        <button className="product-page-btn">Add to Cart</button>
+                        <button 
+                            className="product-page-btn"
+                            onClick={() => handleAddToCart(product)}
+                        >Add to Cart
+                        </button>
                         <button className="product-page-btn">Buy Now</button>
                     </div>
 

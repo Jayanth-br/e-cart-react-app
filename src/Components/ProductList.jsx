@@ -6,7 +6,6 @@ import { useCart } from "./CartContext";
 function ProductCard({title, products}) {
 
     const navigate = useNavigate();
-
     const { addToCart } = useCart();
 
     function onClickProduct(product){
@@ -15,6 +14,9 @@ function ProductCard({title, products}) {
 
     function handleAddToCart(event, product){
         event.stopPropagation();
+        if(product.colors){
+            product.selectedColor = product.colors[0].name;
+        }
         addToCart(product);  
     }
 
