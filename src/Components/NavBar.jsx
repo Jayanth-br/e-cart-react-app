@@ -2,8 +2,12 @@ import ekartImg from "../assets/ekart.png";
 import "./NavBar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { useCart } from "./CartContext";
 
 function NavBar() {
+
+    const { totalItems } = useCart();
+
     return (
         <nav className="nav-bar">
             <div className="nav-left-section">
@@ -30,7 +34,7 @@ function NavBar() {
 
             <div className="nav-bar-right-section">
                 <button className="order-btn nav-bar-btn">Orders</button>
-                <button className="cart-btn nav-bar-btn">Cart</button>
+                <button className="cart-btn nav-bar-btn">Cart { totalItems > 0 ? totalItems : "" }</button>
                 <button className="profile-btn nav-bar-btn">Profile</button>
             </div>
         </nav>

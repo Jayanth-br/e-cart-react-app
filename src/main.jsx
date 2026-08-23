@@ -9,10 +9,10 @@ import { CartProvider } from './Components/CartContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-
+    <CartProvider>
     <NavBar />
 
-    <CartProvider>
+    
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Navigate to="/home" replace/>}/>
