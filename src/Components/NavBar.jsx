@@ -3,10 +3,16 @@ import "./NavBar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { useCart } from "./CartContext";
+import { useNavigate } from "react-router-dom";
 
 function NavBar() {
 
+    const navigate = useNavigate();
     const { totalItems } = useCart();
+
+    function handleCart(){
+        navigate("/cart");
+    }
 
     return (
         <nav className="nav-bar">
@@ -34,7 +40,7 @@ function NavBar() {
 
             <div className="nav-bar-right-section">
                 <button className="order-btn nav-bar-btn">Orders</button>
-                <button className="cart-btn nav-bar-btn">Cart { totalItems > 0 ? totalItems : "" }</button>
+                <button className="cart-btn nav-bar-btn" onClick={() => handleCart()}>Cart { totalItems > 0 ? totalItems : "" }</button>
                 <button className="profile-btn nav-bar-btn">Profile</button>
             </div>
         </nav>
