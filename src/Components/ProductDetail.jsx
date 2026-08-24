@@ -28,11 +28,10 @@ function ProductDetail({ productId }) {
         if(product.colors){
             product.selectedColor = product.colors[0].name;
         }
-        addToCart(product);  
+        addToCart(product, product.selectedColor);
     }
 
     return (
-
         <>
             {!product && <h1>Product Not Found</h1> }
 
@@ -100,7 +99,6 @@ function ProductDetail({ productId }) {
                 
             }
         </>
-        
     )
 }
 export default ProductDetail;

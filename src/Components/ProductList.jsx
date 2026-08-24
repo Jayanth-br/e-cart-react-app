@@ -17,7 +17,7 @@ function ProductCard({title, products}) {
         if(product.colors){
             product.selectedColor = product.colors[0].name;
         }
-        addToCart(product);  
+        addToCart(product, product.selectedColor);  
     }
 
     return (
