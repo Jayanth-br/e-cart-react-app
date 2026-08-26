@@ -52,8 +52,9 @@
     border: none;
     padding: 8px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .add-to-cart-btn:hover {
-    cursor: pointer;
+    opacity: 90%;
 }
