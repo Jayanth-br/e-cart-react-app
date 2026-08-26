@@ -35,6 +35,10 @@
     cursor: pointer;
 }
 
+.product-page-btn:hover {
+    opacity: 90%;
+}
+
 .color-selector-section {
     display: flex;
     gap: 10px;
