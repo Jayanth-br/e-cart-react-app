@@ -1,97 +1,118 @@
+import "./Cart.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useCart } from "./CartContext";
 import { faMinus, faPlus, faStar } from "@fortawesome/free-solid-svg-icons";
-import "./Cart.css";
+import emptyCart from "../assets/empty-cart.png";
+import { useNavigate } from "react-router-dom";
 function Cart(){
 
     const { cart, updateQuantity, totalPrice } = useCart();
+    const navigate = useNavigate();
+
+    function handleShowNow(){
+        navigate("/home");
+    }
 
     return (
-        <section className="cart-section">
+        <>
+            { cart.length > 0 ? (
+                <section className="cart-section">
+                    <>
+                        <div className="cart-products">
 
-            { cart.length > 0 && (
-
-                <>
-
-                    <div className="cart-products">
-
-                        { cart.map((item, i) => (
-                            <div key={i} className="cart-product">
-                                <img 
-                                    src={item.image}
-                                    height="200px"
-                                />
-
-                                <div>
-                                    <h4>{item.title}</h4>
-                                    <p>{item.info}</p>
-                                    <p 
-                                        style={{ padding: "0px" }}>
-                                        <FontAwesomeIcon icon={faStar} 
-                                        style={{color: "#255fa6"}} 
+                            { cart.map((item, i) => (
+                                <div key={i} className="cart-product">
+                                    <img 
+                                        src={item.image}
+                                        height="200px"
+                                        width="200px"
+                                        style={{ objectFit: "contain" }}
                                     />
-                                        {item.rating}  ({item.reviews})
-                                    </p>
-                                    
+
+                                    <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                                        <h4>{item.title}</h4>
+                                        <p>{item.info}</p>
+                                        <p 
+                                            style={{ padding: "0px" }}>
+                                            <FontAwesomeIcon icon={faStar} 
+                                            style={{color: "#255fa6"}} 
+                                        />
+                                            {item.rating}  ({item.reviews})
+                                        </p>
+                                        
+                                    </div>
+
+                                    <div className="product-qty">
+                                        <button className="qty-btn" onClick={() => updateQuantity(item.id, item.selectedColor, -1)}>
+                                            <FontAwesomeIcon icon={faMinus} style={{color: "#000",}} />
+                                        </button>
+
+                                        <p className="product-qty-count">{item.quantity}</p>
+
+                                        <button className="qty-btn" onClick={() => updateQuantity(item.id, item.selectedColor, 1)}>
+                                            <FontAwesomeIcon icon={faPlus} style={{color: "#000",}} />
+                                        </button>
+                                    </div>
+
+                                    <h2>₹{(item.price * item.quantity).toLocaleString('en-IN')}</h2>
                                 </div>
+                            )) }
 
-                                <div className="product-qty">
-                                    <button className="qty-btn" onClick={() => updateQuantity(item.id, item.selectedColor, -1)}>
-                                        <FontAwesomeIcon icon={faMinus} style={{color: "#000",}} />
-                                    </button>
+                        </div>
 
-                                    <p className="product-qty-count">{item.quantity}</p>
+                        <div className="cart-summary-section">
 
-                                    <button className="qty-btn" onClick={() => updateQuantity(item.id, item.selectedColor, 1)}>
-                                        <FontAwesomeIcon icon={faPlus} style={{color: "#000",}} />
-                                    </button>
-                                </div>
-
-                                <h3>₹{(item.price * item.quantity).toLocaleString('en-IN')}</h3>
+                            <h2 style={{ marginBottom: "10px" }}>Order Summary</h2>
+                            <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "12px" }}>
+                                <p>Subtotal</p>
+                                <p>₹{ totalPrice.toLocaleString('en-IN') }</p>
                             </div>
-                        )) }
 
-                    </div>
+                            <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "12px" }}>
+                                <p>Delivery charges</p>
+                                <p>FREE</p>
+                            </div>
 
-                    <div className="cart-summary-section">
+                            <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "12px" }}>
+                                <p>Platform fees</p>
+                                <p>₹15</p>
+                            </div>
 
-                        <h2 style={{ marginBottom: "5px" }}>Order Summary</h2>
-                        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "5px" }}>
-                            <p>Subtotal</p>
-                            <p>₹{ totalPrice.toLocaleString('en-IN') }</p>
+                            <hr style={{ margin: "10px 0px" }}/>
+
+                            <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "12px" }}>
+                                <h3>Total</h3>
+                                <h3>₹{ (totalPrice + 15).toLocaleString("en-IN")}</h3>
+                            </div>
+
+                            <button className="checkout-btn btn">
+                                Procceed to Checkout
+                            </button>
+                            
                         </div>
+                    </>
+                </section>
+                ) : 
+                (
+                    <section className="cart-empty-section">
+                        <img 
+                            src={emptyCart} 
+                            alt="Empty cart"
+                            style={{ textAlign: "center" }} 
+                            height="120px"
+                            width="120px"/>
 
-                        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "5px" }}>
-                            <p>Delivery charges</p>
-                            <p>FREE</p>
-                        </div>
+                            <h2>Your cart is empty!</h2>
 
-                        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "5px" }}>
-                            <p>Platform fees</p>
-                            <p>₹15</p>
-                        </div>
-
-                        <hr style={{ margin: "10px 0px" }}/>
-
-                        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "5px" }}>
-                            <h3>Total</h3>
-                            <h3>₹{ (totalPrice + 15).toLocaleString("en-IN")}</h3>
-                        </div>
-
-                        <button className="checkout-btn">
-                            Procceed to Checkout
-                        </button>
-                        
-                    </div>
-
-                </>
-            )
-
+                            <button 
+                            className="show-now-btn"
+                            onClick={() => handleShowNow()}>
+                                Shop now
+                            </button>
+                    </section>
+                )
             }
-
-            
-            
-        </section>
+        </>
     )
 }
 export default Cart;
