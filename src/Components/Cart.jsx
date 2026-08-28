@@ -25,12 +25,12 @@ function Cart(){
                                     <img 
                                         src={item.image}
                                         height="200px"
-                                        width="200px"
+                                        width="180px"
                                         style={{ objectFit: "contain" }}
                                     />
 
-                                    <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-                                        <h4>{item.title}</h4>
+                                    <div style={{ width: "100%", display: "flex", flexDirection: "column", gap: "8px", alignItems: "flex-start" }}>
+                                        <h3>{item.title}</h3>
                                         <p>{item.info}</p>
                                         <p 
                                             style={{ padding: "0px" }}>
@@ -63,7 +63,7 @@ function Cart(){
                         <div className="cart-summary-section">
 
                             <h2 style={{ marginBottom: "10px" }}>Order Summary</h2>
-                            <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "12px" }}>
+                            <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "14px" }}>
                                 <p>Subtotal</p>
                                 <p>₹{ totalPrice.toLocaleString('en-IN') }</p>
                             </div>

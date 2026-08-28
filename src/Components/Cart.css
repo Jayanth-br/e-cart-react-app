@@ -17,7 +17,6 @@
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
     justify-items: center;
-    gap: 10px;
     padding: 10px;
 }
 
@@ -58,7 +57,7 @@
 
 .cart-summary-section {
     height: fit-content;
-    min-width: 250px;
+    min-width: 280px;
     padding: 20px;
 }
 
