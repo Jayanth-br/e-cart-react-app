@@ -1,6 +1,6 @@
 :root {
-  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Poppins', system-ui, -apple-system, sans-serif;
   color-scheme: light dark;
 
   font-synthesis: none;
@@ -10,9 +10,6 @@
 
   --primary-color: #255fa6;
   --background-color: #EFF3F6;
-
-
-
   --light-text: #616161;
 }
 
@@ -20,5 +17,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--font-family);
+  font-family: var(--font-body);
+
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
 }
