@@ -16,10 +16,12 @@ function Cart(){
     return (
         <>
             { cart.length > 0 ? (
+                    
                 <section className="cart-section">
                     <>
-                        <div className="cart-products">
+                        <h2 className="cart-page-header" style={{ fontWeight: "lighter" }}>Shopping Cart</h2>
 
+                        <div className="cart-products">
                             { cart.map((item, i) => (
                                 <div key={i} className="cart-product">
                                     <img 
@@ -30,7 +32,7 @@ function Cart(){
                                     />
 
                                     <div style={{ width: "100%", display: "flex", flexDirection: "column", gap: "8px", alignItems: "flex-start" }}>
-                                        <h3>{item.title}</h3>
+                                        <h3 style={{ fontWeight: "lighter" }}>{item.title}</h3>
                                         <p>{item.info}</p>
                                         <p 
                                             style={{ padding: "0px" }}>
@@ -62,15 +64,18 @@ function Cart(){
 
                         <div className="cart-summary-section">
 
-                            <h2 style={{ marginBottom: "10px" }}>Order Summary</h2>
+                            <h3 style={{ marginBottom: "10px", fontWeight: "lighter" }}>Price Details</h3>
+
+                            <hr style={{ margin: "10px 0px", border:"1px dashed #eee" }}/>
+
                             <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "14px" }}>
                                 <p>Subtotal</p>
                                 <p>₹{ totalPrice.toLocaleString('en-IN') }</p>
                             </div>
 
                             <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "12px" }}>
-                                <p>Delivery charges</p>
-                                <p>FREE</p>
+                                <p>Shipping</p>
+                                <p style={{ color: "#008000", fontWeight: "bold" }}>FREE</p>
                             </div>
 
                             <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "12px" }}>
@@ -78,10 +83,10 @@ function Cart(){
                                 <p>₹15</p>
                             </div>
 
-                            <hr style={{ margin: "10px 0px" }}/>
+                            <hr style={{ margin: "10px 0px", border:"1px dashed #eee" }}/>
 
                             <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "12px" }}>
-                                <h3>Total</h3>
+                                <h3 style={{ fontWeight: "lighter" }}>Total Amount</h3>
                                 <h3>₹{ (totalPrice + 15).toLocaleString("en-IN")}</h3>
                             </div>
 
@@ -92,6 +97,7 @@ function Cart(){
                         </div>
                     </>
                 </section>
+                
                 ) : 
                 (
                     <section className="cart-empty-section">
