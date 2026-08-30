@@ -23,6 +23,7 @@
 }
 .product-rating {
     font-size: 12px;
+    padding: 2px 4px;
 }
 .product-img {
     object-fit: contain;
@@ -30,7 +31,6 @@
     margin-bottom: 5px;
 }
 .product-info,
-.product-rating,
 .product-price {
     margin: 0px 0px 5px 0px;
     padding: 2px 4px;
