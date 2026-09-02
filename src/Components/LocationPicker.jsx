@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import getAddressFromCoordinates from "../services/fetchLocation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 function LocationPicker() {
     const [currLocation, setCurrLocation] = useState(null);
@@ -11,8 +13,8 @@ function LocationPicker() {
         }
 
         const options = {
-            enableHighAccuracy: true, // Uses GPS if available
-            timeout: 5000,           // Max wait time (5 sec)
+            enableHighAccuracy: true,
+            timeout: 5000,
             maximumAge: 0
         }
 
@@ -42,8 +44,12 @@ function LocationPicker() {
     }, [])
 
     return (
-        <div className="location-container">
-            {currLocation?.city ? `${currLocation.city}` : "Locating"}
+        <div className="location-container" style={{ marginLeft: "10px" }}>
+            <FontAwesomeIcon icon={faLocationDot} style={{color: "#ffffff"}} />
+            <span 
+            style={{ marginLeft: "5px", fontSize: "0.875rem", fontWeight: "600", color: "#ffffff" }}>
+                {currLocation?.city ? `${currLocation.city} ${currLocation.pincode}` : "Locating"}
+            </span>
         </div>
     )
 }

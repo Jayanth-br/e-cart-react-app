@@ -1,7 +1,7 @@
 import ekartImg from "../assets/ekart.png";
 import "./NavBar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping, faMagnifyingGlass, faCircleUser, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping, faMagnifyingGlass, faCircleUser } from '@fortawesome/free-solid-svg-icons';
 import { useCart } from "./CartContext";
 import { useNavigate } from "react-router-dom";
 import LocationPicker from "./LocationPicker";
@@ -22,12 +22,11 @@ function NavBar() {
                     src={ekartImg} 
                     width="40" height="40" 
                     className="nav-bar-logo-img"
-                    alt="e-kart logo"
+                alt="e-kart logo"
                 />
                 <h1 className="nav-bar-logo-name">e-kart</h1>
-                <FontAwesomeIcon icon={faLocationDot} style={{color: "#ffffff",}} />
-                <LocationPicker />
-            </div>
+                
+            </div>            
 
             <div className="nav-bar-middle-section">
                 <input 
@@ -42,6 +41,8 @@ function NavBar() {
             </div>
 
             <div className="nav-bar-right-section">
+
+                <LocationPicker />
 
                 <button className="order-btn nav-bar-btn" title="Orders">
                     Orders
