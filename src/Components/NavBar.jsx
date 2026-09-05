@@ -19,6 +19,10 @@ function NavBar() {
         navigate("/home");
     }
 
+    function onClickProfile(){
+        navigate("/account");
+    }
+
     return (
         <nav className="nav-bar">
             <div className="nav-left-section" onClick={() => onClickLogo()}>
@@ -57,7 +61,7 @@ function NavBar() {
                     { totalItems > 0 ? (<sup className="cart-items-count">{totalItems}</sup>)   : "" }
                 </button>
 
-                <button className="profile-btn nav-bar-btn" title="Profile">
+                <button className="profile-btn nav-bar-btn" title="Account" onClick={() => onClickProfile()}>
                     <FontAwesomeIcon icon={faCircleUser} style={{color: "#ffffff", fontSize:"20px"}} />
                 </button>
 
