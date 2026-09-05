@@ -44,10 +44,10 @@ function LocationPicker() {
     }, [])
 
     return (
-        <div className="location-container" style={{ marginLeft: "10px" }}>
+        <div className="location-container">
             <FontAwesomeIcon icon={faLocationDot} style={{color: "#ffffff"}} />
             <span 
-            style={{ marginLeft: "5px", fontSize: "0.875rem", fontWeight: "600", color: "#ffffff" }}>
+            style={{ marginLeft: "5px", fontSize: "0.875rem", color: "#ffffff" }}>
                 {currLocation?.city ? `${currLocation.city} ${currLocation.pincode}` : "Locating"}
             </span>
         </div>

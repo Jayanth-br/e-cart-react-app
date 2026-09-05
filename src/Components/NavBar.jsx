@@ -1,7 +1,7 @@
 import ekartImg from "../assets/ekart.png";
 import "./NavBar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping, faMagnifyingGlass, faCircleUser } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping, faMagnifyingGlass, faCircleUser, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { useCart } from "./CartContext";
 import { useNavigate } from "react-router-dom";
 import LocationPicker from "./LocationPicker";
@@ -15,9 +15,13 @@ function NavBar() {
         navigate("/cart");
     }
 
+    function onClickLogo(){
+        navigate("/home");
+    }
+
     return (
         <nav className="nav-bar">
-            <div className="nav-left-section">
+            <div className="nav-left-section" onClick={() => onClickLogo()}>
                 <img 
                     src={ekartImg} 
                     width="40" height="40" 
@@ -44,13 +48,13 @@ function NavBar() {
 
                 <LocationPicker />
 
-                <button className="order-btn nav-bar-btn" title="Orders">
-                    Orders
+                <button className="wishlist-btn nav-bar-btn" title="Wishlist">
+                    <FontAwesomeIcon icon={faHeart} style={{color: "#ffffff",}} />
                 </button>
 
                 <button className="cart-btn nav-bar-btn" title="Cart" onClick={() => handleCart()}>
                     <FontAwesomeIcon icon={faCartShopping} /> 
-                    { totalItems > 0 ? (<span className="cart-items-count">{totalItems}</span>)   : "" }
+                    { totalItems > 0 ? (<sup className="cart-items-count">{totalItems}</sup>)   : "" }
                 </button>
 
                 <button className="profile-btn nav-bar-btn" title="Profile">

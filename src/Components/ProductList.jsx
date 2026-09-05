@@ -38,7 +38,7 @@ function ProductCard({title, products}) {
                             height={220} 
                             className="product-img"/>
 
-                        <h3 className="product-title">{product.title}</h3>
+                        <h4 className="product-title">{product.title}</h4>
                         <p className="product-info">{product.info}</p>
                         <p 
                             className="product-rating"

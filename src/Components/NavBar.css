@@ -13,7 +13,8 @@
 .nav-left-section {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
+    cursor: pointer;
 }
 
 .nav-bar-logo-name {
