@@ -6,6 +6,7 @@ import Product from './Components/pages/Product.jsx'
 import NavBar from './Components/NavBar.jsx'
 import { CartProvider } from './Components/CartContext.jsx'
 import Cart from './Components/Cart.jsx'
+import Account from "./Components/pages/Account.jsx"
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                         <Route path='/home' element={<Home />}/>
                         <Route path='/product/:productId' element={<Product />}/>
                         <Route path='/cart' element={<Cart />}/>
+                        <Route path="/account" element={<Account />}/>
                     </Routes>
                 </BrowserRouter>
             </CartProvider>
