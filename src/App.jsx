@@ -6,7 +6,7 @@ import Product from './Components/pages/Product.jsx'
 import NavBar from './Components/NavBar.jsx'
 import { CartProvider } from './Components/CartContext.jsx'
 import Cart from './Components/Cart.jsx'
-import Account from "./Components/pages/Account.jsx"
+import Account from "./Components/account/Account.jsx"
 
 function App() {
     return (
