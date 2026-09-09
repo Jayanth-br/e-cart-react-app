@@ -3,6 +3,7 @@ import DashboardTab from "./tabs/DashboardTab";
 import OrdersTab from "./tabs/OrdersTab";
 import AddressesTab from "./tabs/AddressesTab";
 import ProfileSettingTab from "./tabs/ProfileSettings";
+import "./Account.css";
 
 const ACCOUNT_TABS = [
     { "id": "dashboard", "label": "Dashboard", "component": DashboardTab },
@@ -24,11 +25,11 @@ function Account() {
 
             {/* Sidebar Navigation */}
             <aside className="user-account-options">
-                <h4>My Account</h4>
-
-                <nav>
+                <h2 style={{ marginBottom: "10px" }}>My Account</h2>
+                <nav className="account-navigation-btns">
                     { ACCOUNT_TABS.map(( tab ) =>  (
                         <button 
+                            className={ activeTabId == tab.id ? "nav-btn active" : "nav-btn" }
                             key={tab.id} 
                             onClick={() => setActiveTabId(tab.id)}>
                                 {tab.label}
