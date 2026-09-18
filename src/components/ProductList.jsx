@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
-import "../Components/ProductList.css";
+import "../components/ProductList.css";
 import { useCart } from "./CartContext";
 function ProductCard({title, products}) {
 

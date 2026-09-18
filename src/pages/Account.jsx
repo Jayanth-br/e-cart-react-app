@@ -1,8 +1,8 @@
 import { useState } from "react";
-import DashboardTab from "./tabs/DashboardTab";
-import OrdersTab from "./tabs/OrdersTab";
-import AddressesTab from "./tabs/AddressesTab";
-import ProfileSettingTab from "./tabs/ProfileSettings";
+import DashboardTab from "../components/account-section/DashboardTab";
+import OrdersTab from "../components/account-section/OrdersTab";
+import AddressesTab from "../components/account-section/AddressesTab";
+import ProfileSettingTab from "../components/account-section/ProfileSettings";
 import "./Account.css";
 
 const ACCOUNT_TABS = [
@@ -15,9 +15,7 @@ const ACCOUNT_TABS = [
 function Account() {
 
     const [activeTabId, setActiveTabId] = useState("dashboard");
-
     const currentTab = ACCOUNT_TABS.find(tab => tab.id == activeTabId);
-
     const ActiveComponent = currentTab ? currentTab.component : DashboardTab;
 
     return (
