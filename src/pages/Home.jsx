@@ -1,7 +1,7 @@
-import ProductList from "../ProductList";
-import products from "../../util/products.json";
+import ProductList from "../components/ProductList";
+import products from "../util/products.json";
 import "./Home.css";
-import Carousel from "../Carousel";
+import Carousel from "../components/Carousel";
 
 function Home() {
     return (

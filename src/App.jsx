@@ -1,12 +1,12 @@
 import { StrictMode } from "react"
 import './index.css'
-import Home from './Components/pages/Home.jsx'
+import Home from './pages/Home.jsx'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
-import Product from './Components/pages/Product.jsx'
-import NavBar from './Components/NavBar.jsx'
-import { CartProvider } from './Components/CartContext.jsx'
-import Cart from './Components/Cart.jsx'
-import Account from "./Components/account/Account.jsx"
+import Product from './pages/Product.jsx'
+import NavBar from './components/NavBar.jsx'
+import { CartProvider } from "./components/CartContext.jsx"
+import Cart from "./components/Cart.jsx"
+import Account from "./pages/Account.jsx"
 
 function App() {
     return (
