@@ -2,8 +2,11 @@ import { useEffect, useState } from "react";
 import products from "./../util/products.json";
 import "./ProductDetail.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart as faHeartSolid } from "@fortawesome/free-solid-svg-icons";
+import { faHeart as faHeartRegular } from "@fortawesome/free-regular-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { useCart } from "./CartContext";
+import { useWishlist } from "./WishlistContext";
 function ProductDetail({ productId }) {
 
     const product = products.find((p) => p.id === Number(productId));
@@ -11,6 +14,7 @@ function ProductDetail({ productId }) {
     const [selectedColor, setSelectedColor] = useState("");
     const [currentImage, setCurrentImage] = useState(product.image);
     const { addToCart } = useCart();
+    const { addToWishlist, productIsWishlisted } = useWishlist();
 
     useEffect(() => {
         console.log("Ran Use Effect");
@@ -29,6 +33,11 @@ function ProductDetail({ productId }) {
             product.selectedColor = product.colors[0].name;
         }
         addToCart(product, product.selectedColor);
+    }
+
+    function handleWishlistBtn(product, selectedColor){
+        console.log("Cliked on wishlist btn");
+        addToWishlist(product, selectedColor);
     }
 
     return (
@@ -87,12 +96,19 @@ function ProductDetail({ productId }) {
 
                         
 
-                        <button 
-                            className="product-page-btn"
-                            onClick={() => handleAddToCart(product)}
-                        >Add to Cart
-                        </button>
+                        <button className="product-page-btn" onClick={() => handleAddToCart(product)}>Add to Cart</button>
                         <button className="product-page-btn">Buy Now</button>
+
+                        <div 
+                            className={`wishlist-btn ${productIsWishlisted(product, selectedColor) ? "wishlisted" : ""}`}
+                            onClick={() => handleWishlistBtn(product, selectedColor)}
+                            >
+                            <FontAwesomeIcon 
+                                icon={productIsWishlisted(product, selectedColor) ? faHeartSolid : faHeartRegular} 
+                                style={{ color: "#bc5f5f", marginRight: "6px" }} 
+                            />
+                            <span>{productIsWishlisted(product, selectedColor) ? "Wishlisted" : "Add to Wishlist"}</span>
+                        </div>
                     </div>
 
                 </section>
