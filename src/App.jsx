@@ -7,12 +7,15 @@ import NavBar from './components/NavBar.jsx'
 import { CartProvider } from "./components/CartContext.jsx"
 import Cart from "./components/Cart.jsx"
 import Account from "./pages/Account.jsx"
+import { WishlistProvider } from "./components/WishlistContext.jsx"
 
 function App() {
     return (
           <StrictMode>
 
             <CartProvider>
+
+                <WishlistProvider>
                 <BrowserRouter>
                 <NavBar />
                     <Routes>
@@ -23,6 +26,7 @@ function App() {
                         <Route path="/account" element={<Account />}/>
                     </Routes>
                 </BrowserRouter>
+                </WishlistProvider>
             </CartProvider>
    
         </StrictMode>

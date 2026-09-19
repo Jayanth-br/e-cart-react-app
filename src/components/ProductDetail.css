@@ -81,5 +81,10 @@
 
 .product-specification {
     font-size: 14px;
-    
+    margin-bottom: 2px;
+}
+
+.wishlist-btn {
+    cursor: pointer;
+    margin: 0px auto;
 }
