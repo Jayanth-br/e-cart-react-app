@@ -29,14 +29,13 @@ function ProductDetail({ productId }) {
     }
 
     function handleAddToCart(product){
-        if(product.colors){
-            product.selectedColor = product.colors[0].name;
-        }
-        addToCart(product, product.selectedColor);
+        // if(product.colors){
+        //     product.selectedColor = product.colors[0].name;
+        // }
+        addToCart(product, selectedColor);
     }
 
-    function handleWishlistBtn(product, selectedColor){
-        console.log("Cliked on wishlist btn");
+    function handleWishlistBtn(product){
         addToWishlist(product, selectedColor);
     }
 

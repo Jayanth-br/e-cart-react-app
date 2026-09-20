@@ -23,6 +23,10 @@ function NavBar() {
         navigate("/account");
     }
 
+    function handleWishlist() {
+        navigate("/wishlist");
+    }
+
     return (
         <nav className="nav-bar">
             <div className="nav-left-section" onClick={() => onClickLogo()}>
@@ -52,7 +56,7 @@ function NavBar() {
 
                 <LocationPicker />
 
-                <button className="wishlist-btn nav-bar-btn" title="Wishlist">
+                <button className="wishlist-btn nav-bar-btn" title="Wishlist" onClick={() => handleWishlist()}>
                     <FontAwesomeIcon icon={faHeart} style={{color: "#ffffff",}} />
                 </button>
 
