@@ -108,7 +108,7 @@ function Cart(){
                             height="120px"
                             width="120px"/>
 
-                            <h2>Your cart is empty!</h2>
+                            <p style={{ fontSize: "1.25rem", fontWeight: "600" }}>Your cart is empty!</p>
 
                             <button 
                             className="show-now-btn"
