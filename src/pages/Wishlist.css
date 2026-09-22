@@ -186,18 +186,12 @@
   background-color: #255fa6;
   color: #ffffff;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .btn-browse-products:hover {
   opacity: 90%;
-  transform: translateY(-1px);
-}
-
-.btn-browse-products:active {
-  transform: translateY(0);
 }

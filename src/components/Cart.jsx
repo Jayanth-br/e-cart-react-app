@@ -97,7 +97,6 @@ function Cart(){
                         </div>
                     </>
                 </section>
-                
                 ) : 
                 (
                     <section className="cart-empty-section">
