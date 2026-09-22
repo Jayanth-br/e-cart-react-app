@@ -85,3 +85,7 @@
     cursor: pointer;
     font-size: 16px;
 }
+
+.show-now-btn:hover {
+    opacity: 90%;
+}
