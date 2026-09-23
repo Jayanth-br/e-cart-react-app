@@ -39,3 +39,106 @@
 .account-content {
     margin: 10px;
 }
+/* Dashboard styling start */
+.dashboard-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  padding: 0.5rem;
+}
+
+/* Welcome Header */
+.dashboard-welcome h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 0.25rem 0;
+}
+
+.dashboard-welcome p {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Cards Section Grid */
+.dashboard-card-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Base Card Styling */
+.dashboard-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Icon Container with subtle background tinting */
+.dashboard-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+/* Variant Specific Themes */
+.orders-icon {
+  background-color: #eff6ff;
+  color: #255fa6;
+}
+
+.wishlist-icon {
+  background-color: #fef2f2;
+  color: #a62525;
+}
+
+.completed-icon {
+  background-color: #f0fdf4;
+  color: #32a625;
+}
+
+/* Card Text Content */
+.dashboard-card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+  margin: 0;
+}
+
+.card-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0.15rem 0 0 0;
+}
+
+/* Mobile Responsive adjustment */
+@media (max-width: 640px) {
+  .dashboard-card-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dashboard styling end */
