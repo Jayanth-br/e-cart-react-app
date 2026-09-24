@@ -1,43 +1,112 @@
+/* Container Layout */
 .account-section {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    margin: 20px;
-    column-gap: 10px;
+  display: flex;
+  gap: 2rem;
+  max-width: 1500px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  align-items: flex-start;
 }
 
-.account-navigation-btns {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-    width: 95%;
-}
-
+/* Sidebar Styling */
 .user-account-options {
-    padding: 10px 20px;
-    background-color: #f7fbff;
-    border-radius: 5px;
+  width: 260px;
+  flex-shrink: 0;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
+.user-account-options h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #f3f4f6;
+  margin-top: 0;
+}
+
+/* Navigation Buttons Container */
+.account-navigation-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+}
+
+/* Tab Button Base Style */
 .nav-btn {
-    background-color: #f7fbff;
-    border: none;
-    font-size: large;
-    cursor: pointer;
-    padding: 8px 10px;
-    width: 100%;
-    text-align: left;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: #4b5563;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.nav-btn.active,
+/* Hover State */
 .nav-btn:hover {
-    background-color: hsl(213, 100%, 94%);
-    border-radius: 5px;
-    color: hsl(213, 60%, 32%);
+  background-color: #f3f4f6;
+  color: #1f2937;
 }
 
+/* Active Selected Tab State */
+.nav-btn.active {
+  background-color: #ebf8ff;
+  color: #255fa6;
+  font-weight: 600;
+}
+
+/* Dynamic Content Panel */
 .account-content {
-    margin: 10px;
+  flex-grow: 1;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 2rem;
+  min-height: 420px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive Layout for Tablet & Mobile */
+@media (max-width: 768px) {
+  .account-section {
+    flex-direction: column;
+    gap: 1.25rem;
+    margin: 1rem auto;
+    padding: 0 1rem;
+  }
+
+  .user-account-options {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .account-navigation-btns {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+
+  .nav-btn {
+    white-space: nowrap;
+    justify-content: center;
+  }
+
+  .account-content {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.25rem;
+  }
 }
 /* Dashboard styling start */
 .dashboard-section {
